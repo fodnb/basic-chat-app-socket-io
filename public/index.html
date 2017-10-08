@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" lang="en-us">
+
+	<title>Basic Chat Application</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"> </script>
+</head>
+<body>
+	<h1> Welcome to Dan's First Chat Application </h1>
+
+	<form>
+		<input type="text" name="handle"  id="handle" value="handle" placeholder="Name:">
+		<input type="text" name="message" id="message" value="message" placeholder="message">
+		<input type="button" value="submit" id="button">
+	</form>
+
+	<div id="chat">
+	</div>
+	<div id="typing">
+	</div>
+
+	<script type="text/javascript" src="/chat.js"></script>
+</body>
+</html>
