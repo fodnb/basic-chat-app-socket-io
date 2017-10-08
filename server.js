@@ -16,6 +16,16 @@ const io = socket(server);
 
 io.on('connection', (socket)=>{
 
-	console.log(socket.id);
+	
+	socket.on('chat', (data)=>{
+		console.log(data.handle, data.message);
+		
+		io.sockets.emit('chat', {
+			handle: data.handle,
+			message: data.message
+		});	
 
-})
+	});
+
+
+});
