@@ -19,12 +19,14 @@ io.on('connection', (socket)=>{
 	
 	socket.on('chat', (data)=>{
 		console.log(data.handle, data.message);
-		
 		io.sockets.emit('chat', {
 			handle: data.handle,
 			message: data.message
 		});	
+	});
 
+	socket.on('typing',(data)=>{
+		socket.broadcast.emit('typing', {handle: data.handle});
 	});
 
 
