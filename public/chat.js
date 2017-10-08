@@ -1,7 +1,7 @@
 $(document).ready(()=>{
 
 
-const socket = io.connect("http://localhost:3500");
+const socket = io.connect("https://boiling-earth-58619.herokuapp.com" || "http://localhost:3500");
 
 $("#message").on('keypress', ()=>{
 	const handle = $("#handle").val();
